@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- lang attribute helps search engines return language specific results, and it is also used by screen readers that switch language profiles to provide the correct accent and pronunciation. Also used for hyphenation via CSS -->
+<html lang="en">
+<!-- SEO cheat sheet https://learn-the-web.algonquindesign.ca/topics/seo-cheat-sheet/ -->
+<!-- HTML Validator https://validator.w3.org/#validate_by_input -->
+
+<head>
+  <!-- For compatibility -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Every html page must have a title! Use · as a separater. -->
+  <title>Dr. Norman Borlaug · The man who saved a billion lives</title>
+  <!-- For other pages: -->
+  <!-- <title>Page Title · Dr. Norman Borlaug</title> -->
+
+  <!-- SEO description must be on every page; author is optional -->
+  <meta name="description" content="A short sentence describing the purpose and content of this individual page.">
+  <meta name="author" content="Your Name">
+
+  <!-- Robots meta tags https://developers.google.com/search/reference/robots_meta_tag -->
+  <!-- Remove if you want the site to be crawled -->
+  <meta name="robots" content="NOINDEX, NOFOLLOW">
+
+  <!-- Open Graph http://ogp.me/ -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="Title of this page, same as title tag">
+  <meta property="og:url" content="http://fullurl.com/to-this/page/">
+  <meta property="og:image" content="http://fullurl.com/to-this/image.jpg">
+  <meta property="og:site_name" content="Name of your website">
+  <meta property="og:description" content="Description of this page, same as meta description">
+  <!-- Twitter Cards https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@yourtwitterhandle">
+  <meta name="twitter:title" content="Title of this page, same as title tag">
+  <meta name="twitter:url" content="http://fullurl.com/to-this/page/">
+  <meta name="twitter:description" content="Description of this page, same as meta description">
+  <meta name="twitter:image" content="http://fullurl.com/to-this/image.jpg">
+  <!-- Geotagging & location data https://en.wikipedia.org/wiki/ICBM_address#Modern_use https://en.wikipedia.org/wiki/Geotagging#HTML_pages-->
+  <meta name="ICBM" content="45.416667,-75.7">
+  <meta name="geo.position" content="45.416667;-75.7">
+  <meta name="geo.region" content="ca-on">
+  <meta name="geo.placename" content="Ottawa">
+
+  <!-- Links -->
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <!-- Better to import Google fonts in CSS -->
+  <!-- Favicon - 260x260 PNG/JPG/SVG then use https://realfavicongenerator.net/ -->
+
+  <!-- FontAwesome https://fontawesome.com/ -->
+
+</head>
+
+<body>
+  <!-- Use data-nosnippet attribute for text parts not to be used as a snippet. NOT VALID: not a span, div, or section -->
+  <!-- Use rel="nofollow" when search engines should ignore the link for rankings -->
+  <!-- Follow http://schema.org/ for metadata attributes on elements -->
+  <!-- Responsive images 
+    https://www.freecodecamp.org/news/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433/ 
+    
+    https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
+  <!-- Emmet is faster https://docs.emmet.io/cheat-sheet/ -->
+  <!-- Use classes not IDs -->
+  <!-- Use semantic HTML & use labels(for="id"), ids, values, fieldsets & legends for forms -->
+  <!-- Only use h1 for the main title -->
+  <!-- Use the title attribute on links and alt attribute on pictures -->
+  <!-- Don't include URLs inline, keep link text short & explicit (no "click here") -->
+  <main id="main">
+    <h1 id="title">Dr. Norman Borlaug</h1>
+    <span>The man who saved a billion lives.</span>
+    <figure id="img-div">
+      <img src="img/s84t8005.bmp"
+        alt="Dr. Norman Borlaug seen standing in Mexican wheat field with a group of biologists" id="image">
+      <figcaption id="img-caption">Dr. Norman Borlaug, third from the left, trains biologists in Mexico on how to
+        increase wheat yields - part of his life-long war on hunger.</figcaption>
+    </figure>
+    <section id="tribute-info">
+      <h2>Here's a time line of Dr. Borlaug's life:</h2>
+      <ul>
+        <li><time datetime="1914">1914</time> - Born in Cresco, Iowa</li>
+        <li><time datetime="1933">1933</time> - Leaves his family's farm to attend the University of Minnesota, thanks to a Depression era program known as the "National Youth Administration"</li>
+        <li><time datetime="1935">1935</time> - Has to stop school and save up more money. Works in the Civilian Conservation Corps, helping starving Americans. "I saw how food changed them", he said. "All of this left scars on me."</li>
+        <li><time datetime="1937">1937</time> - Finishes university and takes a job in the US Forestry Service</li>
+        <li><time datetime="1938">1938</time> - Marries wife of 69 years Margret Gibson. Gets laid off due to budget cuts. Inspired by Elvin Charles Stakman, he returns to school study under Stakman, who teaches him about breeding pest-resistent plants.</li>
+        <li><time datetime="1941">1941</time> - Tries to enroll in the military after the Pearl Harbor attack, but is rejected. Instead, the military asked his lab to work on waterproof glue, DDT to control malaria, disinfectants, and other applied science.</li>
+        <li><time datetime="1942">1942</time> - Receives a Ph.D. in Genetics and Plant Pathology</li>
+        <li><time datetime="1944">1944</time> - Rejects a 100% salary increase from Dupont, leaves behind his pregnant wife, and flies to Mexico to head a new plant pathology program. Over the next 16 years, his team breeds 6,000 different strains of disease resistent wheat - including different varieties for each major climate on Earth.</li>
+        <li><time datetime="1945">1945</time> - Discovers a way to grown wheat twice each season, doubling wheat yields</li>
+        <li><time datetime="1953">1953</time> - crosses a short, sturdy dwarf breed of wheat with a high-yeidling American breed, creating a strain that responds well to fertilizer. It goes on to provide 95% of Mexico's wheat.</li>
+        <li><time datetime="1962">1962</time> - Visits Delhi and brings his high-yielding strains of wheat to the Indian subcontinent in time to help mitigate mass starvation due to a rapidly expanding population</li>
+        <li><time datetime="1970">1970</time> - receives the Nobel Peace Prize</li>
+        <li><time datetime="1983">1983</time> - helps seven African countries dramatically increase their maize and sorghum yields</li>
+        <li><time datetime="1984">1984</time> - becomes a distinguished professor at Texas A&M University</li>
+        <li><time datetime="2005">2005</time> - states "we will have to double the world food supply by 2050." Argues that genetically modified crops are the only way we can meet the demand, as we run out of arable land. Says that GM crops are not inherently dangerous because "we've been genetically modifying plants and animals for a long time. Long before we called it science, people were selecting the best breeds."</li>
+        <li><time datetime="2009">2009</time> - dies at the age of 95.</li>
+      </ul>
+      <blockquote cite="http://news.rediff.com/report/2009/sep/14/pm-pays-tribute-to-father-of-green-revolution-borlaug.htm">
+        <p>"Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress."</p>
+        <cite>Indian Prime Minister Manmohan Singh</cite>
+      </blockquote>
+    </section>
+    <span> If you have time, you should read more about this incredible human being on his <a
+        href="https://en.wikipedia.org/wiki/Norman_Borlaug" id="tribute-link" target="_blank">Wikipedia entry</a>.
+    </span>
+  </main>
+
+  <!-- Put scripts down here so HTML render isn't stopped to load JS -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "freecodecamp-responsive-web-design-projects---build-a-tribute-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss dist/styles/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pawper/freeCodeCamp-Responsive-Web-Design-Projects---Build-a-Tribute-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pawper/freeCodeCamp-Responsive-Web-Design-Projects---Build-a-Tribute-Page/issues"
+  },
+  "homepage": "https://github.com/Pawper/freeCodeCamp-Responsive-Web-Design-Projects---Build-a-Tribute-Page#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
