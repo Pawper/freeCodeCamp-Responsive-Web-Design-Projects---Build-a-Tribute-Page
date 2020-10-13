@@ -115,6 +115,7 @@ body {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   padding-left: 1rem;
+  z-index: 2;
   @media only screen and (min-width: $bp-tablet) {
     padding: 1rem 1.5rem;
   }
@@ -134,6 +135,7 @@ body {
   border-bottom-left-radius: 1rem;
   padding-left: 1rem;
   margin-bottom: 7rem;
+  z-index: 2;
 
   @media only screen and (min-width: $bp-tablet) {
     padding: 1rem 1.5rem;
