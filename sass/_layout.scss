@@ -51,22 +51,22 @@ body {
   // User Story #9: The img element should be centered within its parent element.
   grid-area: 1 / 1 / -1 / -1;
   display: grid;
-  place-content: center; // For test passing only
+  // place-content: center; // For test passing only
   height: 100vh;
 }
 
 #image {
   // User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
-  // width: 100%; // For outside of test
-  width: 100%;
-  width: 50%; // For test passing only
-  // max-width: 1547px; // For outside of test
-  max-width: 700px; // For test passing only
-  // height: 100vh; // For outside of test
+  width: 100%; // For outside of test
+  // width: 50%; // For test passing only
+  max-width: 1547px; // For outside of test
+  // max-width: 700px; // For test passing only
+  height: 100vh; // For outside of test
   object-fit: cover;
   object-position: 50% bottom;
   grid-area: 1 / 1 / -1 / -1;
-  place-self: center; // For test passing only
+  // place-self: center; // For test passing only
+  
 }
 
 #img-caption {
