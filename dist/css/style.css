@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Passion+One&family=ZCOOL+XiaoWei&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Patua+One&display=swap");
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -9,102 +9,104 @@ html {
     margin: 0;
     padding: 0; }
 
+.box {
+  z-index: 2;
+  background-color: #387c9c;
+  border-top: 5px solid #222f5a;
+  border-right: 5px solid #222f5a;
+  border-radius: 5px;
+  padding: 1rem 1.5rem; }
+  @media only screen and (min-width: 64em) {
+    .box {
+      width: clamp(40ch, 30vw, 55ch); } }
+
 body {
   width: 100%;
   height: 100%;
   display: grid;
   place-content: center;
-  background-image: url(/dist/img/Pavlensky-Reuters.jpg);
-  background-position: bottom right;
-  backdrop-filter: blur(5px) brightness(150%) grayscale(70%); }
+  background-image: url(../img/Around-the-Neighborhood.jpg);
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(4px) saturate(80%) contrast(150%); }
+  @media only screen and (min-width: 64em) {
+    body {
+      overflow: hidden; } }
 
 .container {
   display: grid;
-  width: 100vw;
-  max-width: 1547px;
-  grid-template-columns: min-content 1fr min-content;
-  grid-template-rows: auto auto max-content 1fr;
-  grid-template-areas: "title . byline" "title . poem" "title . poem" "title . read"; }
+  gap: 1rem;
+  grid-template-columns: 65px 1fr;
+  grid-template-rows: 1fr repeat(3, min-content);
+  grid-template-areas: "title img" "title sub" "title text" "title read"; }
+  @media only screen and (min-width: 64em) {
+    .container {
+      height: 100vh;
+      grid-template-columns: min-content 1fr min-content;
+      grid-template-rows: 1fr repeat(3, min-content) 1fr;
+      grid-template-areas: "title . ." "title . sub" "title . text" "title . read" ". . ."; } }
 
 #title {
-  grid-area: title;
-  z-index: 2; }
-  @media only screen and (min-width: 48em) {
-    #title {
-      margin-left: 15vw; } }
-
-#byline {
-  grid-area: byline;
   z-index: 2;
-  padding: .5rem;
-  padding-left: 1rem;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%); }
-  @media only screen and (min-width: 48em) {
-    #byline {
-      padding: 1rem 1.5rem; } }
+  grid-area: title; }
+  @media only screen and (min-width: 64em) {
+    #title {
+      place-self: center;
+      margin-left: 30rem; } }
+
+.subheading {
+  grid-area: sub; }
 
 #img-div {
-  grid-area: 1 / 1 / -1 / -1;
+  grid-area: img;
   display: grid;
   place-content: center;
-  height: 100vh; }
+  gap: 1rem; }
+  @media only screen and (min-width: 64em) {
+    #img-div {
+      grid-area: 1 / 1 / -1 / -1;
+      place-self: start;
+      margin-right: 10vw; } }
 
 #image {
+  grid-area: 1 / 1 / -1 / -1;
   width: 100%;
-  width: 50%;
-  max-width: 700px;
-  object-fit: cover;
-  object-position: 50% bottom;
-  grid-area: 1 / 1 / -1 / -1;
-  place-self: center; }
+  max-width: 960px;
+  outline: 10px solid #222f5a;
+  outline-offset: -10px; }
+  @media only screen and (min-width: 64em) {
+    #image {
+      mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, white 20%, white 80%, rgba(255, 255, 255, 0) 100%);
+      outline: none; } }
 
-#img-caption {
-  grid-area: 1 / 1 / -1 / -1;
-  align-self: end;
-  padding: .5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%);
-  z-index: 2;
-  position: fixed;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  max-width: 85ch; }
-  @media only screen and (min-width: 48em) {
-    #img-caption {
-      padding: 1rem 1.5rem; } }
+@media only screen and (min-width: 64em) {
+  #img-caption {
+    margin-top: 78vh;
+    grid-area: 1 / 1 / -1 / -1;
+    position: fixed;
+    max-width: 85ch;
+    justify-self: end; } }
 
-.poem {
-  grid-area: poem;
-  width: max-content;
-  padding: .5rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%);
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  padding-left: 1rem; }
-  @media only screen and (min-width: 48em) {
-    .poem {
-      padding: 1rem 1.5rem; } }
+.text {
+  grid-area: text; }
 
 .readmore {
   grid-area: read;
-  padding: .5rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%);
-  align-self: start;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  padding-left: 1rem; }
-  @media only screen and (min-width: 48em) {
-    .readmore {
-      padding: 1rem 1.5rem; } }
+  align-self: start; }
 
-@media only screen and (min-width: 48em) {
-  body {
-    font-size: 1.6rem; } }
+body {
+  color: #fffbe9;
+  font-size: 1.6rem;
+  font-family: 'Patua One', cursive;
+  line-height: 1.6; }
+  body a {
+    text-decoration: none;
+    border-bottom: 3px dotted #8d1c1c;
+    color: #8d1c1c; }
+    body a:hover {
+      border-bottom: 3px dotted #cc1717;
+      color: #cc1717; }
 
 h1 {
   font-size: 6rem; }
@@ -125,15 +127,13 @@ h6 {
   font-size: 1.6rem; }
 
 #title {
-  font-family: 'ZCOOL XiaoWei', serif;
-  padding-left: .5rem;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 5rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
   width: 0px;
   word-break: break-all;
   white-space: pre-wrap;
   line-height: 1;
   text-transform: uppercase;
-  color: white;
-  text-shadow: 1px 1px 2px black; }
-
-.poem span {
-  display: block; }
+  text-shadow: 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a, 0 0 8px #222f5a; }

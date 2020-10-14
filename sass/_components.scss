@@ -1,0 +1,14 @@
+@import "variables";
+
+.box {
+  z-index: 2;
+  background-color: rgb(56, 124, 156);
+  border-top: 5px solid rgb(34, 47, 90);
+  border-right: 5px solid rgb(34, 47, 90);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+
+  @media only screen and (min-width: $bp-laptop) {
+    width: clamp(40ch, 30vw, 55ch);
+  }
+}

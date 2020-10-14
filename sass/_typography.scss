@@ -1,10 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Passion+One&family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Patua+One&display=swap');
 @import "variables";
 
 
 body {
-  @media only screen and (min-width: $bp-tablet) {
-    font-size: 1.6rem;
+  color: rgb(255, 251, 233);
+  font-size: 1.6rem;
+  font-family: 'Patua One', cursive;
+  line-height: 1.6;
+
+  a {
+    text-decoration: none;
+    border-bottom: 3px dotted rgb(141, 28, 28);
+    color: rgb(141, 28, 28);
+
+    &:hover {
+      border-bottom: 3px dotted rgb(204, 23, 23);
+      color: rgb(204, 23, 23);
+    }
   }
 }
 
@@ -29,8 +41,10 @@ h6 {
 }
 
 #title {
-  font-family: 'ZCOOL XiaoWei', serif;
-  padding-left: .5rem;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 5rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
 
   // writing-mode: vertical-lr;
   // text-orientation: upright;
@@ -41,13 +55,14 @@ h6 {
   line-height: 1;
 
   text-transform: uppercase;
-  
-  color: white;
-  text-shadow: 1px 1px 2px black;
-}
-
-.poem {
-  span {
-    display: block;
-  }
+  text-shadow: 0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90),
+  0 0 8px rgb(34, 47, 90);
 }
