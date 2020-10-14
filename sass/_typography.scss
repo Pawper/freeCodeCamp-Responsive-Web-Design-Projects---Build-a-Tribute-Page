@@ -43,16 +43,19 @@ h6 {
 #title {
   font-family: 'Bubblegum Sans', cursive;
   font-size: 5rem;
-  padding-left: 2rem;
   padding-top: 2rem;
 
-  // writing-mode: vertical-lr;
-  // text-orientation: upright;
+  @media only screen and (min-width: $bp-laptop) {
+    padding-top: 10rem;
+  }
 
-  width: 0px;
-  word-break: break-all;
-  white-space: pre-wrap;
-  line-height: 1;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+
+  // width: 0px;
+  // word-break: break-all;
+  // white-space: pre-wrap;
+  // line-height: 1;
 
   text-transform: uppercase;
   text-shadow: 0 0 8px rgb(34, 47, 90),
