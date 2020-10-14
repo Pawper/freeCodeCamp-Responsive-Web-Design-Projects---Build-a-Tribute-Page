@@ -5,110 +5,103 @@ body {
   height: 100%;
   display: grid;
   place-content: center;
-  background-image: url(/dist/img/Pavlensky-Reuters.jpg);
-  background-position: bottom right;
-  backdrop-filter: blur(5px) brightness(150%) grayscale(70%);
+  background-image: url(../img/Around-the-Neighborhood.jpg);
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(4px) saturate(80%) contrast(150%);
+
+  @media only screen and (min-width: $bp-laptop) {
+    overflow: hidden;
+  }
+
 }
 
 .container {
   display: grid;
-  width: 100vw;
-  max-width: 1547px;
-  grid-template-columns: min-content 1fr min-content;
-  grid-template-rows: auto auto max-content 1fr;
+  gap: 1rem;
+  grid-template-columns: 65px 1fr;
+  grid-template-rows: 1fr repeat(3, min-content);
   grid-template-areas:
-    "title . byline"
-    "title . poem"
-    "title . poem"
-    "title . read";
+    "title img"
+    "title sub"
+    "title text"
+    "title read";
+
+  @media only screen and (min-width: $bp-laptop) {
+    height: 100vh;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: 1fr repeat(3, min-content) 1fr;
+    grid-template-areas:
+      "title . ."
+      "title . sub"
+      "title . text"
+      "title . read"
+      ". . .";
+  }
+
 }
 
 // Please find below my solutions for the freeCodeCamp requirements
 
 #title {
-  grid-area: title;
   z-index: 2;
-  @media only screen and (min-width: $bp-tablet) {
-    margin-left: 15vw;
+  grid-area: title;
+
+  @media only screen and (min-width: $bp-laptop) {
+    place-self: center;
+    margin-left: 30rem;
   }
 }
 
-#byline {
-  grid-area: byline;
-  z-index: 2;
-  padding: .5rem;
-  padding-left: 1rem;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  background-color: rgba(white, .4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%);
-  @media only screen and (min-width: $bp-tablet) {
-    padding: 1rem 1.5rem;
-  }
+.subheading {
+  grid-area: sub;
 }
 
 #img-div {
   // User Story #9: The img element should be centered within its parent element.
-  grid-area: 1 / 1 / -1 / -1;
+  grid-area: img;
   display: grid;
-  place-content: center; // For test passing only
-  height: 100vh;
+  place-content: center;
+  gap: 1rem;
+
+  @media only screen and (min-width: $bp-laptop) {
+    grid-area: 1 / 1 / -1 / -1;
+    place-self: start;
+    margin-right: 10vw;
+  }
 }
 
 #image {
   // User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
-  // width: 100%; // For outside of test
-  width: 100%;
-  width: 50%; // For test passing only
-  // max-width: 1547px; // For outside of test
-  max-width: 700px; // For test passing only
-  // height: 100vh; // For outside of test
-  object-fit: cover;
-  object-position: 50% bottom;
   grid-area: 1 / 1 / -1 / -1;
-  place-self: center; // For test passing only
+  width: 100%;
+  max-width: 960px;
+  outline: 10px solid rgb(34, 47, 90);
+  outline-offset: -10px;
+
+
+  @media only screen and (min-width: $bp-laptop) {
+    mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 20%,   rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);
+    outline: none;
+  }
 }
 
 #img-caption {
-  grid-area: 1 / 1 / -1 / -1;
-  align-self: end;
-  padding: .5rem 1rem;
-  background-color: rgba(white, .4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%);
-  z-index: 2;
-  position: fixed;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  max-width: 85ch;
-  @media only screen and (min-width: $bp-tablet) {
-    padding: 1rem 1.5rem;
+  @media only screen and (min-width: $bp-laptop) {
+    margin-top: 78vh;
+    grid-area: 1 / 1 / -1 / -1;
+    position: fixed;
+    max-width: 85ch;
+    justify-self: end;
   }
 }
 
-.poem {
-  grid-area: poem;
-  width: max-content;
-  padding: .5rem;
-  background-color: rgba(white, .4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%);
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  padding-left: 1rem;
-  @media only screen and (min-width: $bp-tablet) {
-    padding: 1rem 1.5rem;
-  }
+.text {
+  grid-area: text;
 }
 
 .readmore {
   grid-area: read;
-  padding: .5rem;
-  background-color: rgba(white, .4);
-  backdrop-filter: blur(5px) brightness(250%) grayscale(50%);
   align-self: start;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  padding-left: 1rem;
-  @media only screen and (min-width: $bp-tablet) {
-    padding: 1rem 1.5rem;
-  }
 }
